@@ -83,7 +83,7 @@ header {
   box-shadow: 0 0 0 3px rgba(77, 163, 255, 0.2);
 }
 
-.search button {
+.search button, #toggle-btn {
   background-color: var(--color-primary-dark);
   border: none;
   color: var(--color-text-inverse);
@@ -94,7 +94,7 @@ header {
   transition: var(--transition);
 }
 
-.search button:hover {
+.search button:hover, #toggle-btn:hover {
   background-color: var(--color-primary);
   box-shadow: var(--shadow-hover);
 }
