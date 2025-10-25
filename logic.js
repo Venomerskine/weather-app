@@ -49,3 +49,27 @@ export function cToF(celsius) {
 export function fToC(fahrenheit) {
   return (fahrenheit - 32) * 5/9;
 }
+
+export async function getGif(query){
+  const apiKey = "u2GbphOxbKnrUzfqxH0hiXlU794nXoGG";
+
+  try{
+    const res = await fetch(
+          `https://api.giphy.com/v1/gifs/translate?api_key=${apiKey}&s=${encodeURIComponent(query)}`,
+          { mode: "cors" }
+        );
+
+        const data = await res.json();
+
+        if (!data.data || !data.data.images) {
+          return null;
+        }
+
+        const gifUrl = data.data.images.original.url;
+        console.log(gifUrl)
+
+        return gifUrl
+  } catch(err){
+ return null
+  }
+}

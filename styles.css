@@ -108,6 +108,7 @@ main {
 }
 
 /* TODAY SECTION */
+
 .today {
   background: var(--color-bg-card);
   box-shadow: var(--shadow-soft);
@@ -115,8 +116,14 @@ main {
   padding: 20px;
   grid-column: span 2;
   transition: var(--transition);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
+.wth{
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
 .today:hover {
   box-shadow: var(--shadow-hover);
 }
@@ -197,4 +204,11 @@ main {
 .forecast-day .temps span {
   display: inline-block;
   padding: 0 6px;
+}
+
+/* gif*/
+
+.gif{
+  background-color: var(--color-primary-light);
+  box-shadow: inset 0 0 5px 2px grey;
 }
