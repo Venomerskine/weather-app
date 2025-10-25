@@ -41,3 +41,11 @@ export async function getWeatherAndExtract(location) {
         console.error("Failed to process weather data:", error)
     }
 }
+
+export function cToF(celsius) {
+  return (celsius * 9/5) + 32;
+}
+
+export function fToC(fahrenheit) {
+  return (fahrenheit - 32) * 5/9;
+}
