@@ -4,7 +4,7 @@ const locationInput = document.getElementById("location");
 const form = document.getElementById("searchForm");
 const mainDiv = document.querySelector("main");
 
-let isCelsius = true;
+let isCelsius = false;
 
 // Helper
 function displayTemperature(value) {
